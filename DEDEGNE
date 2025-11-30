@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  
+    /* --- Blog --- */
+    .blog { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .blog-post { background:#fff; padding:20px; border-radius:10px; width:300px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+    .blog-post h4 { font-family:'Playfair Display', serif; margin-bottom:10px; color:#b76e79; }
+
+    /* --- Contact --- */
+    .contact form { display:flex; flex-direction:column; max-width:500px; margin:auto; gap:15px; }
+    .contact input, .contact textarea { padding:10px; border-radius:5px; border:1px solid #ccc; }
+    .contact button { padding:12px; border:none; background:#b76e79; color:#fff; border-radius:25px; font-size:16px; cursor:pointer; transition:0.3s; }
+    .contact button:hover { background:#a55a63; }
+
+    /* --- Footer --- */
+    footer { text-align:center; padding:20px; background:#f8f0f5; }
+
+    /* --- Responsive --- */
+    @media(max-width:768px){ .about { flex-direction:column; text-align:center; } .services, .blog, .gallery { flex-direction:column; align-items:center; } }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Logo DÉDÉGNÉ" class="logo">
+    <h1>DEdéGné</h1>
+  </div>
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Galerie</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>L’élégance sur mesure, signée DÉDÉGNÉ</h2>
+    <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Découvrir mes créations</button>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="section-title">À propos</h2>
+    <div class="about">
+      <img src="https://via.placeholder.com/300x400" alt="Portrait de DédéGné">
+      <div class="about-text">
+        <p>DédéGné, styliste passionnée, transforme chaque tissu en une œuvre d’élégance. Son univers allie créativité, féminité et authenticité.</p>
+        <ul>
+          <li><strong>Authenticité :</strong> Chaque création reflète la personnalité de la cliente.</li>
+          <li><strong>Créativité :</strong> L’innovation au service du style.</li>
+          <li><strong>Féminité :</strong> La célébration de la femme sous toutes ses formes.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Création sur mesure</h3>
+        <p>Robes uniques, adaptées à chaque silhouette.</p>
+      </div>
+      <div class="service-card">
+        <h3>Tenues de soirée</h3>
+        <p>Élégance raffinée pour les grandes occasions.</p>
+      </div>
+      <div class="service-card">
+        <h3>Tenues professionnelles</h3>
+        <p>Chic et confort au bureau.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mariages & cérémonies</h3>
+        <p>Robes de mariée, demoiselles d’honneur, invitées.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2 class="section-title">Galerie</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/250x350" alt="Création 1">
+      <img src="https://via.placeholder.com/250x350" alt="Création 2">
+      <img src="https://via.placeholder.com/250x350" alt="Création 3">
+      <img src="https://via.placeholder.com/250x350" alt="Création 4">
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog">
+    <h2 class="section-title">Blog</h2>
+    <div class="blog">
+      <div class="blog-post">
+        <h4>Comment choisir sa robe selon sa morphologie</h4>
+        <p>Découvrez nos conseils pour mettre en valeur vos formes avec style.</p>
+      </div>
+      <div class="blog-post">
+        <h4>Les tendances couleurs de la saison</h4>
+        <p>Adoptez les couleurs phares pour un look élégant et moderne.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Nom" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="5" placeholder="Message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      <p style="text-align:center; margin-top:20px;">
+        📍 Atelier : [Adresse à compléter] <br>
+        📧 Email : contact@dedegne.com <br>
+        📱 Instagram | Facebook | TikTok
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 DÉDÉGNÉ. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
