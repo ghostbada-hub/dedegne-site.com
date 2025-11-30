@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEdéGné - Styliste</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Montserrat', sans-serif; }
+    body { background:#fff0f5; color:#333; line-height:1.6; }
+    img { max-width:100%; display:block; }
+    section { padding:60px 20px; }
+    a { text-decoration:none; color:inherit; }
+
+    header {
+      position:sticky; top:0; z-index:1000;
+      background:white;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:15px 40px;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    }
+    header .logo-container { display:flex; align-items:center; gap:15px; }
+    header img.logo { height:50px; }
+    header h1 { font-family:'Playfair Display', serif; color:#b76e79; font-size:28px; }
+    nav a { margin-left:20px; font-weight:600; transition:0.3s; }
+    nav a:hover { color:#b76e79; }
+
+    .hero {
+      height:100vh;
+      background:url('images/styliste1.jpg') center/cover no-repeat;
+      display:flex; flex-direction:column; justify-content:center; align-items:center;
+      text-align:center; color:white;
+    }
+    .hero h2 {
+      font-family:'Playfair Display', serif; font-size:48px;
+      text-shadow:2px 2px 5px rgba(0,0,0,0.5);
+      margin-bottom:20px;
+    }
+    .hero button {
+      padding:15px 30px; background:#b76e79; color:white;
+      border:none; border-radius:25px; cursor:pointer; font-size:16px;
+    }
+
+    h2.section-title {
+      text-align:center; margin-bottom:40px;
+      color:#b76e79; font-family:'Playfair Display', serif; font-size:36px;
+    }
+
+    .about { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px; }
+    .about img { border-radius:10px; width:320px; }
+
+    .services { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+    .service-card {
+      background:white; width:260px; padding:20px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      text-align:center;
+    }
+
+    .gallery { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; }
+    .gallery img { width:260px; border-radius:10px; }
+
+    .blog { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+    .blog-post {
+      background:white; width:300px; padding:20px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact form {
+      max-width:500px; margin:auto;
+      display:flex; flex-direction:column; gap:15px;
+    }
+    .contact input, .contact textarea {
+      padding:12px; border:1px solid #ccc; border-radius:5px;
+    }
+    .contact button {
+      padding:12px; border:none; background:#b76e79;
+      border-radius:25px; color:white;
+    }
+
+    footer { text-align:center; padding:20px; background:#f8f0f5; }
+
+    @media(max-width:768px){
+      .about { flex-direction:column; text-align:center; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-container">
+    <img class="logo" src="images/logo.png" alt="Logo DédéGné">
+    <h1>DEdéGné</h1>
+  </div>
+
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Galerie</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>L’élégance sur mesure, signée DÉDÉGNÉ</h2>
+  <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+    Découvrir mes créations
+  </button>
+</section>
+
+<section id="about">
+  <h2 class="section-title">À propos</h2>
+  <div class="about">
+    <img src="images/styliste2.jpg" alt="Styliste en travail">
+
+    <div class="about-text">
+      <p>DédéGné, styliste passionnée, transforme chaque tissu en œuvre d’élégance.</p>
+      <ul>
+        <li><strong>Authenticité :</strong> Chaque création est unique.</li>
+        <li><strong>Créativité :</strong> L’innovation au service du style.</li>
+        <li><strong>Féminité :</strong> La beauté de toutes les silhouettes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">Services</h2>
+  <div class="services">
+    <div class="service-card">
+      <h3>Création sur mesure</h3>
+      <p>Robes uniques et personnalisées.</p>
+    </div>
+    <div class="service-card">
+      <h3>Tenues de soirée</h3>
+      <p>Élégance garantie.</p>
+    </div>
+    <div class="service-card">
+      <h3>Tenues professionnelles</h3>
+      <p>Chic au quotidien.</p>
+    </div>
+    <div class="service-card">
+      <h3>Mariages & cérémonies</h3>
+      <p>Robes inoubliables.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2 class="section-title">Galerie</h2>
+  <div class="gallery">
+    <img src="images/couture1.jpg" alt="Création 1">
+    <img src="images/couture2.jpg" alt="Création 2">
+    <img src="images/styliste1.jpg" alt="Création 3">
+    <img src="images/styliste2.jpg" alt="Création 4">
+  </div>
+</section>
+
+<section id="blog">
+  <h2 class="section-title">Blog</h2>
+  <div class="blog">
+    <div class="blog-post">
+      <h4>Choisir sa robe selon sa morphologie</h4>
+      <p>Nos conseils pour vous sublimer.</p>
+    </div>
+
+    <div class="blog-post">
+      <h4>Couleurs tendance 2025</h4>
+      <p>Inspirations et idées.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="contact">
+    <form>
+      <input type="text" placeholder="Nom">
+      <input type="email" placeholder="Email">
+      <textarea rows="5" placeholder="Message"></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 DÉDÉGNÉ. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
